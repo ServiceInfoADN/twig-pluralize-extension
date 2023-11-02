@@ -1,31 +1,20 @@
 <?php
 
-namespace Tomodomo\Twig;
+namespace ServiceADN\Twig;
 
 use Exception;
-use Twig_Extension;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class Pluralize extends Twig_Extension
+class Pluralize extends AbstractExtension
 {
     /**
-     * Returns the name of this extension
-     *
-     * @return string
+     * @return TwigFunction[]
      */
-    public function getName()
-    {
-        return 'pluralize';
-    }
-
-    /**
-     * Returns the functions this extension adds
-     *
-     * @return array
-     */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction(
+            new TwigFunction(
                 'pluralize',
                 [$this, 'getPluralizedString']
             )
@@ -35,7 +24,7 @@ class Pluralize extends Twig_Extension
     /**
      * Get a plural variation of a string
      *
-     * @param  integer      $count The count that forms the basis of the
+     * @param  int     $count The count that forms the basis of the
      *                               pluralizer. Passed into sprintf
      * @param  string       $one   The string to display when the count
      *                               is 1. Use sprintf syntax, if desired
@@ -45,8 +34,9 @@ class Pluralize extends Twig_Extension
      * @param  string|null  $none  The string to display when the count
      *                               is 0. Use sprintf syntax, if desired
      * @return string
+     * @throws Exception
      */
-    public function getPluralizedString($count, $one, $many, $none = null)
+    public function getPluralizedString(int $count, string $one, string $many, ?string $none = null): string
     {
         // Make sure $count is a numeric value
         if (!is_numeric($count)) {

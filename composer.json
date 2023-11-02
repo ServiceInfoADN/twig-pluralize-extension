@@ -1,21 +1,24 @@
 {
-  "name": "tomodomo/twig-pluralize-extension",
+  "name": "serviceinfoadn/twig-pluralize-extension",
+  "version": "1.0.0",
   "description": "Twig extension to output correctly pluralized strings",
   "keywords": ["twig extension", "plural", "twig"],
   "type": "library",
   "license": "BSD-3-Clause",
   "require": {
-    "php": ">=5.4.0",
-    "twig/twig": ">=v1.0.0"
+    "php": ">=7.4",
+    "twig/twig": "3.7.1"
   },
-  "homepage": "https://tomodomo.co/",
-  "authors": [
-    {
-      "name": "Tomodomo",
-      "homepage": "https://tomodomo.co/"
-    }
-  ],
   "autoload": {
     "psr-4": { "Tomodomo\\Twig\\": "src/" }
-  }
+  },
+  "repositories": [
+    {
+      "packagist.org": false
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/ServiceInfoADN/twig-plurilize-extension.git"
+    }
+  ]
 }
