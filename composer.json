@@ -1,6 +1,6 @@
 {
   "name": "serviceinfoadn/twig-pluralize-extension",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Twig extension to output correctly pluralized strings",
   "keywords": ["twig extension", "plural", "twig"],
   "type": "library",
