@@ -1,6 +1,6 @@
 <?php
 
-namespace ServiceADN\Twig;
+namespace Adn\Twig;
 
 use Exception;
 use Twig\Extension\AbstractExtension;

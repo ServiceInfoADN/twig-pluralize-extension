@@ -10,7 +10,7 @@
     "twig/twig": "3.7.1"
   },
   "autoload": {
-    "psr-4": { "Tomodomo\\Twig\\": "src/" }
+    "psr-4": { "Adn\\Twig\\": "src/" }
   },
   "repositories": [
     {
